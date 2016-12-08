@@ -86,7 +86,7 @@
      <string>Puerto</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="sendButton">
+   <widget class="QPushButton" name="receiveButton">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -96,7 +96,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Enviar</string>
+     <string>Recibir</string>
     </property>
    </widget>
   </widget>

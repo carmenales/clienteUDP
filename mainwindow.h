@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QUdpSocket>
 
 namespace Ui {
 class MainWindow;
@@ -16,10 +17,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_sendButton_clicked();
+    void on_receiveButton_clicked();
+    void processPendingDatagrams();
 
 private:
     Ui::MainWindow *ui;
+    QUdpSocket udpSocket;
+
 };
 
 #endif // MAINWINDOW_H
