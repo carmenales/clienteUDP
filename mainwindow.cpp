@@ -16,16 +16,6 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::on_receiveButton_clicked(){
-//    QByteArray buffer;
-//    QString direccion;
-//    int port;
-
-//    buffer = ui->mensaje->toPlainText().toUtf8();
-//    direccion = ui->ipAddress->text();
-//    port = ui->puerto->text().toInt();
-
-//    udpSocket.writeDatagram(buffer.data(),QHostAddress(direccion), port);
-
     processPendingDatagrams();
 }
 
@@ -37,7 +27,7 @@ void MainWindow::processPendingDatagrams(){
     }while(udpSocket.hasPendingDatagrams());
 
     QDataStream in(&datagram, QIODevice::ReadOnly);
-    in.setVersion(QDataStream::Qt_5_7);
+    in.setVersion(QDataStream::Qt_5_7); //TODO: Creo que no hace falta
     QString msj;
     in >> msj;
 
